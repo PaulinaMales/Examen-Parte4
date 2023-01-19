@@ -16,12 +16,12 @@
             <div class="container" style="margin-top: 5%;">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <div class="card">
+                        <div class="card " style="box-shadow:10px 10px 11px grey;">
                             <div class="card-header" style="text-align: center;">CRUD</div>
                             <br>
                             <!--CONTENIDO DE LA PAGINA -->
                             <div class="my-3" style="text-align:center;">
-                            <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Agregar producto</a>
+                            <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn button">Agregar producto</a>
                         </div>
 
                     @if ($message = Session::get('success'))
@@ -176,6 +176,10 @@
 
 
 @endsection
+
+
+
+
 
 
 
