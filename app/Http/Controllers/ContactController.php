@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -23,7 +24,7 @@ class ContactController extends Controller
 
 
             if($this->isOnline()){
-               /* $mail_data=[
+                $mail_data=[
 
                     'recipient'=>'elizabeth150301@gmail.com',
                     'fromEmail'=> $request->email,
@@ -32,15 +33,16 @@ class ContactController extends Controller
                     'body'=>$request->message
 
 
+
                 ];
 
-                \Mail::send('contactForm',$mail_data, function($message) use ($mail_data)
+                Mail::send('message',$mail_data, function($message) use ($mail_data)
                 {
                      $message->to($mail_data['recipient'])
                              ->from($mail_data['fromEmail'],$mail_data['fromName'])
                              ->subject($mail_data['subject']);
 
-                });*/
+                });
 
                 return redirect()-> back()
 
