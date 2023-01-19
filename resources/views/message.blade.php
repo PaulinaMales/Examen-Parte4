@@ -1,4 +1,4 @@
 <h1>
-<p>Contenido mensaje</p>
-
+    <p>Contenido Mensaje</p>
 </h1>
+<p>{{$_POST['message']}}</p>
