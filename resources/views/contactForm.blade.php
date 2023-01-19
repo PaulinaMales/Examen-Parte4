@@ -57,7 +57,7 @@
 
                                         <div class="form-group">
                                             <label for="">Subject</label>
-                                            <input type="text" class="form-control" name="subject" placeholder="Enter your email" value="{{old('subject')}}">
+                                            <input type="text" class="form-control" name="subject" placeholder="Subject" value="{{old('subject')}}">
                                             @error('subject')
                                             <span class="text-danger">{{$message}}</span>
                                             @enderror
