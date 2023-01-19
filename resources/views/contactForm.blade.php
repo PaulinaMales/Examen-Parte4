@@ -10,7 +10,7 @@
 <div class="container" style="margin-top:3%; padding:20px;">
                             <div class="row justify-content-center">
                                 <div class="col-md-6">
-                                <div class="card">
+                                <div class="card" style="box-shadow:10px 10px 11px grey;">
                                 <div class="card-header" style="text-align: center;">FORMULARIO</div>
                                 <br>
                             <!--CONTENIDO DE LA PAGINA -->
@@ -76,7 +76,7 @@
                                         </div>
                                         <br>
 
-                                        <button class="btn btn-primary">ENVIAR</button>
+                                        <button class="button-send button-s">ENVIAR</button>
                                         
 
                                     </form>
@@ -91,5 +91,8 @@
     
 </body>
 @endsection
+
+
+
 
 
