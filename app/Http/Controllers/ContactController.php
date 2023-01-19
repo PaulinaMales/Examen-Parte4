@@ -24,22 +24,19 @@ class ContactController extends Controller
 
 
             if($this->isOnline()){
-                $mail_data=[
+                $mail_data=([
 
                     'recipient'=>'elizabeth150301@gmail.com',
-                    'fromEmail'=> $request->email,
+                    'fromEmail'=>$request->email,
                     'fromName'=>$request->name,
                     'subject'=>$request->subject,
                     'body'=>$request->message
-
-
-
-                ];
+                ]);
 
                 Mail::send('message',$mail_data, function($message) use ($mail_data)
                 {
-                     $message->to($mail_data['recipient'])
-                             ->from($mail_data['fromEmail'],$mail_data['fromName'])
+                     $message->to($mail_data['fromEmail'])
+                             ->from($mail_data['recipient'],$mail_data['fromName'])
                              ->subject($mail_data['subject']);
 
                 });
@@ -49,7 +46,7 @@ class ContactController extends Controller
                 ->with('success', 'Email enviado correctamente.');
 
             } else{
-                return redirect()-> back()-> withInput()->with('error','Check ypur internet connection!');
+                return redirect()-> back()-> withInput()->with('error','Check your internet connection!');
             }
     }
 
