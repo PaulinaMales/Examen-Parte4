@@ -15,5 +15,8 @@ Route::resource('producto',ProductoController::class);
 
 Route::view("/contact", "contactForm")->name("contactForm");
 
+
+Route::view("/message", "message")->name("message");
+
 Route::post("/send", [ContactController::class, 'send'])->name('send.email');
 
